@@ -114,3 +114,8 @@ function calculateChance(dice) {
     const uniqueValues = new Set(dice);
     return uniqueValues.size === 1;
   }  
+
+  module.exports = lancerDes;
+  module.exports = calculerScore;
+  module.exports = calculateChance
+  module.exports = isYahtzee
