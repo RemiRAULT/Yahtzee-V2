@@ -1,4 +1,4 @@
-// yams.test.js
+// yahtzee.test.js
 
 const { lancerDes, trierDes, compterDes, estValide, calculerScore } = require('./yahtzee');
 
@@ -41,6 +41,43 @@ describe('estValide', () => {
 describe('calculerScore', () => {
   test('renvoie le score pour une combinaison', () => {
     const des = [3, 3, 3, 5, 2];
-    expect(calculerScore(des, 'brelan')).toBe(14);
+    expect(calculerScore(des, 'brelan')).toBe(16);
   });
 });
+
+describe('calculerScore', () => {
+  test('renvoie le score pour une combinaison', () => {
+    const des = [4, 4, 4, 4, 2];
+    expect(calculerScore(des, 'carre')).toBe(18);
+  });
+});
+
+describe('calculerScore', () => {
+  test('renvoie le score pour une combinaison', () => {
+    const des = [4, 4, 4, 3, 3];
+    expect(calculerScore(des, 'full')).toBe(25);
+  });
+});
+
+describe('calculerScore', () => {
+  test('renvoie le score pour une combinaison', () => {
+    const des = [1, 2, 3, 4, 1];
+    expect(calculerScore(des, 'petiteSuite')).toBe(30);
+  });
+});
+
+
+describe('calculerScore', () => {
+  test('renvoie le score pour une combinaison', () => {
+    const des = [1, 2, 3, 4, 5];
+    expect(calculerScore(des, 'grandeSuite')).toBe(40);
+  });
+});
+
+describe('calculerScore', () => {
+  test('renvoie le score pour une combinaison', () => {
+    const des = [5, 5, 5, 5, 5];
+    expect(calculerScore(des, 'yahtzee')).toBe(50);
+  });
+});
+
