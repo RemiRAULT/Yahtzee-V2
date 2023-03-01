@@ -81,3 +81,17 @@ describe('calculerScore', () => {
   });
 });
 
+describe('calculerScore', () => {
+  test('renvoie le score pour une combinaison', () => {
+    const des = [1, 5, 4, 1, 2];
+    expect(calculerScore(des, '')).toBe(13);
+  });
+});
+
+describe('calculerScore', () => {
+  test('renvoie le score pour une combinaison', () => {
+    const des = [5, 3, 6, 1, 4];
+    expect(calculerScore(des, '')).toBe(19);
+  });
+});
+
